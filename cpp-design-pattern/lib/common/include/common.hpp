@@ -1,8 +1,8 @@
-#ifndef _HPP
-#define _HPP
+#ifndef COMMON_HPP
+#define COMMON_HPP
 
 namespace  {
     
 }
 
-#endif// _HPP
+#endif// COMMON_HPP
