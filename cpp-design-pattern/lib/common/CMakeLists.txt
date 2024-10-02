@@ -9,6 +9,7 @@ target_include_directories(common PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${CMAKE_CURRENT_SOURCE_DIR}/creational/factory
     ${CMAKE_CURRENT_SOURCE_DIR}/creational/abstract_factory
+    ${CMAKE_CURRENT_SOURCE_DIR}/creational/singleton
 )
 target_link_libraries(common
     base
