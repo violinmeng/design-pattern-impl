@@ -2,6 +2,7 @@
 #include "factory.hpp"
 #include "abstract_factory.hpp"
 #include "builder.hpp"
+#include "prototype.hpp"
 
 #include <iostream>
 #include <exception>
@@ -37,12 +38,18 @@ void builderMain() {
   builderClientCode(*director);
 }
 
+void prototypeMain() {
+  const std::unique_ptr<DesignPattern::PrototypeFactory> factory = std::make_unique<DesignPattern::PrototypeFactory>();
+  prototypeClientCode(*factory);
+}
+
 int main()
 {
   try {
     // code here
     // factoryMain();
-    builderMain();
+    // builderMain();
+    prototypeMain();
 
     return 0;
   } catch (const std::exception &e) {
