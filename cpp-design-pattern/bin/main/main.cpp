@@ -1,6 +1,7 @@
 #include "base.hpp" // NOLINT
 #include "factory.hpp"
 #include "abstract_factory.hpp"
+#include "builder.hpp"
 
 #include <iostream>
 #include <exception>
@@ -31,12 +32,17 @@ void abstractFactoryMain()
   abstractFactoryClientCode(mff);
 }
 
+void builderMain() {
+  const std::unique_ptr<DesignPattern::Director> director = std::make_unique<DesignPattern::Director>();
+  builderClientCode(*director);
+}
+
 int main()
 {
   try {
     // code here
     // factoryMain();
-    abstractFactoryMain();
+    builderMain();
 
     return 0;
   } catch (const std::exception &e) {
