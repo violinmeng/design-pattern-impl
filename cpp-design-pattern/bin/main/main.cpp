@@ -3,6 +3,7 @@
 #include "abstract_factory.hpp"
 #include "builder.hpp"
 #include "prototype.hpp"
+#include "bridge.hpp"
 
 #include <iostream>
 #include <exception>
@@ -43,14 +44,19 @@ void prototypeMain() {
   prototypeClientCode(*factory);
 }
 
+void bridgeMain() {
+  DesignPattern::bridgeClientCode();
+}
+
 int main()
 {
   try {
     // code here
     // factoryMain();
     // builderMain();
-    prototypeMain();
-
+    // prototypeMain();
+    bridgeMain();
+    // abstractFactoryMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";
