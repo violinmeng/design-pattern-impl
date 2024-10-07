@@ -4,6 +4,7 @@
 #include "builder.hpp"
 #include "prototype.hpp"
 #include "bridge.hpp"
+#include "composite.hpp"
 
 #include <iostream>
 #include <exception>
@@ -48,6 +49,10 @@ void bridgeMain() {
   DesignPattern::bridgeClientCode();
 }
 
+void compositeMain() {
+  DesignPattern::compositeClientCode();
+}
+
 int main()
 {
   try {
@@ -55,8 +60,9 @@ int main()
     // factoryMain();
     // builderMain();
     // prototypeMain();
-    bridgeMain();
+    // bridgeMain();
     // abstractFactoryMain();
+    compositeMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";
