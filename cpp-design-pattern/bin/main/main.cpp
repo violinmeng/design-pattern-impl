@@ -1,13 +1,13 @@
-#include "base.hpp" // NOLINT
-#include "factory.hpp"
 #include "abstract_factory.hpp"
-#include "builder.hpp"
-#include "prototype.hpp"
+#include "base.hpp"// NOLINT
 #include "bridge.hpp"
+#include "builder.hpp"
 #include "composite.hpp"
+#include "factory.hpp"
+#include "prototype.hpp"
 
-#include <iostream>
 #include <exception>
+#include <iostream>
 #include <memory>
 #include <utility>
 
@@ -28,30 +28,30 @@ void factoryMain()
 void abstractFactoryMain()
 {
   std::cout << "Client: Testing client code with the first factory type:\n";
-  const std::unique_ptr<DesignPattern::FurnitureFactory> vff = std::make_unique<DesignPattern::VictorianFurnitureFactory>();
+  const std::unique_ptr<DesignPattern::FurnitureFactory> vff =
+    std::make_unique<DesignPattern::VictorianFurnitureFactory>();
   abstractFactoryClientCode(vff);
   std::cout << "Client: Testing the same client code with the second factory type:\n";
-  const std::unique_ptr<DesignPattern::FurnitureFactory> mff = std::make_unique<DesignPattern::ModernFurnitureFactory>();
+  const std::unique_ptr<DesignPattern::FurnitureFactory> mff =
+    std::make_unique<DesignPattern::ModernFurnitureFactory>();
   abstractFactoryClientCode(mff);
 }
 
-void builderMain() {
+void builderMain()
+{
   const std::unique_ptr<DesignPattern::Director> director = std::make_unique<DesignPattern::Director>();
   builderClientCode(*director);
 }
 
-void prototypeMain() {
+void prototypeMain()
+{
   const std::unique_ptr<DesignPattern::PrototypeFactory> factory = std::make_unique<DesignPattern::PrototypeFactory>();
   prototypeClientCode(*factory);
 }
 
-void bridgeMain() {
-  DesignPattern::bridgeClientCode();
-}
+void bridgeMain() { DesignPattern::bridgeClientCode(); }
 
-void compositeMain() {
-  DesignPattern::compositeClientCode();
-}
+void compositeMain() { DesignPattern::compositeClientCode(); }
 
 int main()
 {
@@ -69,4 +69,3 @@ int main()
     return 1;
   }
 }
-
