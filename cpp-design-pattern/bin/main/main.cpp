@@ -13,6 +13,9 @@
 
 using namespace std;
 
+namespace
+{
+
 void factoryMain()
 {
   std::cout << "Hello, world!\n";
@@ -52,6 +55,8 @@ void prototypeMain()
 void bridgeMain() { DesignPattern::bridgeClientCode(); }
 
 void compositeMain() { DesignPattern::compositeClientCode(); }
+  
+} // namespace
 
 int main()
 {
