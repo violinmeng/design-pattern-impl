@@ -3,6 +3,7 @@
 #include "bridge.hpp"
 #include "builder.hpp"
 #include "composite.hpp"
+#include "decorator.hpp"
 #include "factory.hpp"
 #include "prototype.hpp"
 
@@ -13,8 +14,7 @@
 
 using namespace std;
 
-namespace
-{
+namespace {
 
 void factoryMain()
 {
@@ -55,8 +55,10 @@ void prototypeMain()
 void bridgeMain() { DesignPattern::bridgeClientCode(); }
 
 void compositeMain() { DesignPattern::compositeClientCode(); }
-  
-} // namespace
+
+void decoratorMain() { DesignPattern::decoratorClientCode(); }
+
+}// namespace
 
 int main()
 {
@@ -67,7 +69,8 @@ int main()
     // prototypeMain();
     // bridgeMain();
     // abstractFactoryMain();
-    compositeMain();
+    // compositeMain();
+    decoratorMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";
