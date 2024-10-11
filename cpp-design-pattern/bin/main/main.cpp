@@ -4,6 +4,7 @@
 #include "builder.hpp"
 #include "composite.hpp"
 #include "decorator.hpp"
+#include "facade.hpp"
 #include "factory.hpp"
 #include "prototype.hpp"
 
@@ -58,6 +59,8 @@ void compositeMain() { DesignPattern::compositeClientCode(); }
 
 void decoratorMain() { DesignPattern::decoratorClientCode(); }
 
+void facadeMain() { DesignPattern::facadeClientCode(); }
+
 }// namespace
 
 int main()
@@ -70,7 +73,8 @@ int main()
     // bridgeMain();
     // abstractFactoryMain();
     // compositeMain();
-    decoratorMain();
+    // decoratorMain();
+    facadeMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";
