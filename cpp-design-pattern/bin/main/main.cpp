@@ -10,6 +10,7 @@
 #include "prototype.hpp"
 #include "proxy.hpp"
 #include "chain.hpp"
+#include "command.hpp"
 
 #include <exception>
 #include <iostream>
@@ -70,6 +71,8 @@ void proxyMain() { DesignPattern::proxyClientCode(); }
 
 void chainMain() { DesignPattern::chainClientCode(); }
 
+void commandMain() { DesignPattern::commandClientCode(); }
+
 }// namespace
 
 int main()
@@ -86,7 +89,8 @@ int main()
     // facadeMain();
     // flyweightMain();
     // proxyMain();
-    chainMain();
+    // chainMain();
+    commandMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";
