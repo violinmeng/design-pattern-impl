@@ -8,6 +8,7 @@
 #include "factory.hpp"
 #include "flyweight.hpp"
 #include "prototype.hpp"
+#include "proxy.hpp"
 
 #include <exception>
 #include <iostream>
@@ -63,6 +64,8 @@ void decoratorMain() { DesignPattern::decoratorClientCode(); }
 void facadeMain() { DesignPattern::facadeClientCode(); }
 
 void flyweightMain() { DesignPattern::flyweightClientCode(); }
+
+void proxyMain() { DesignPattern::proxyClientCode(); }
 }// namespace
 
 int main()
@@ -77,7 +80,8 @@ int main()
     // compositeMain();
     // decoratorMain();
     // facadeMain();
-    flyweightMain();
+    // flyweightMain();
+    proxyMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";
