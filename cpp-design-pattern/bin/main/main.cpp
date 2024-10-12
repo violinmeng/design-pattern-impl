@@ -11,6 +11,7 @@
 #include "proxy.hpp"
 #include "chain.hpp"
 #include "command.hpp"
+#include "iterator.hpp"
 
 #include <exception>
 #include <iostream>
@@ -73,6 +74,8 @@ void chainMain() { DesignPattern::chainClientCode(); }
 
 void commandMain() { DesignPattern::commandClientCode(); }
 
+void iteratorMain() { DesignPattern::iteratorClientCode(); }
+
 }// namespace
 
 int main()
@@ -90,7 +93,8 @@ int main()
     // flyweightMain();
     // proxyMain();
     // chainMain();
-    commandMain();
+    // commandMain();
+    iteratorMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";
