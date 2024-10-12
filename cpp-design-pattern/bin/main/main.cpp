@@ -12,6 +12,7 @@
 #include "chain.hpp"
 #include "command.hpp"
 #include "iterator.hpp"
+#include "mediator.hpp"
 
 #include <exception>
 #include <iostream>
@@ -76,6 +77,8 @@ void commandMain() { DesignPattern::commandClientCode(); }
 
 void iteratorMain() { DesignPattern::iteratorClientCode(); }
 
+void mediatorMain() { DesignPattern::mediatorClientCode(); }
+
 }// namespace
 
 int main()
@@ -94,7 +97,8 @@ int main()
     // proxyMain();
     // chainMain();
     // commandMain();
-    iteratorMain();
+    // iteratorMain();
+    mediatorMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";
