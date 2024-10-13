@@ -16,6 +16,7 @@
 #include "observer.hpp"
 #include "state.hpp"
 #include "strategy.hpp"
+#include "template_method.hpp"
 
 #include <exception>
 #include <iostream>
@@ -88,6 +89,8 @@ void stateMain() { DesignPattern::stateClientCode(); }
 
 void strategyMain() { DesignPattern::strategyClientCode(); }
 
+void templateMethodMain() { DesignPattern::templateMethodClientCode(); }
+
 }// namespace
 
 int main()
@@ -110,7 +113,8 @@ int main()
     // mediatorMain();
     // observerMain();
     // stateMain();
-    strategyMain();
+    // strategyMain();
+    templateMethodMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";
