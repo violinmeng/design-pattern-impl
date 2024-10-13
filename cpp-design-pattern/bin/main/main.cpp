@@ -17,6 +17,7 @@
 #include "state.hpp"
 #include "strategy.hpp"
 #include "template_method.hpp"
+#include "visitor.hpp"
 
 #include <exception>
 #include <iostream>
@@ -91,6 +92,8 @@ void strategyMain() { DesignPattern::strategyClientCode(); }
 
 void templateMethodMain() { DesignPattern::templateMethodClientCode(); }
 
+void visitorMain() { DesignPattern::visitorClientCode(); }
+
 }// namespace
 
 int main()
@@ -114,7 +117,8 @@ int main()
     // observerMain();
     // stateMain();
     // strategyMain();
-    templateMethodMain();
+    // templateMethodMain();
+    visitorMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";
