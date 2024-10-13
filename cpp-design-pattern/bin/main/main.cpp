@@ -13,6 +13,7 @@
 #include "command.hpp"
 #include "iterator.hpp"
 #include "mediator.hpp"
+#include "observer.hpp"
 
 #include <exception>
 #include <iostream>
@@ -79,6 +80,8 @@ void iteratorMain() { DesignPattern::iteratorClientCode(); }
 
 void mediatorMain() { DesignPattern::mediatorClientCode(); }
 
+void observerMain() { DesignPattern::observerClientCode(); }
+
 }// namespace
 
 int main()
@@ -98,7 +101,8 @@ int main()
     // chainMain();
     // commandMain();
     // iteratorMain();
-    mediatorMain();
+    // mediatorMain();
+    observerMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";
