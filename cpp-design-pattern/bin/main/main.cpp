@@ -2,18 +2,19 @@
 #include "base.hpp"// NOLINT
 #include "bridge.hpp"
 #include "builder.hpp"
+#include "chain.hpp"
+#include "command.hpp"
 #include "composite.hpp"
 #include "decorator.hpp"
 #include "facade.hpp"
 #include "factory.hpp"
 #include "flyweight.hpp"
-#include "prototype.hpp"
-#include "proxy.hpp"
-#include "chain.hpp"
-#include "command.hpp"
 #include "iterator.hpp"
 #include "mediator.hpp"
+#include "momento.hpp"
 #include "observer.hpp"
+#include "prototype.hpp"
+#include "proxy.hpp"
 #include "state.hpp"
 #include "strategy.hpp"
 #include "template_method.hpp"
@@ -94,6 +95,8 @@ void templateMethodMain() { DesignPattern::templateMethodClientCode(); }
 
 void visitorMain() { DesignPattern::visitorClientCode(); }
 
+void momentoMain() { DesignPattern::momentoClientCode(); }
+
 }// namespace
 
 int main()
@@ -118,7 +121,8 @@ int main()
     // stateMain();
     // strategyMain();
     // templateMethodMain();
-    visitorMain();
+    // visitorMain();
+    momentoMain();
     return 0;
   } catch (const std::exception &e) {
     std::cerr << "Error: " << e.what() << "\n";

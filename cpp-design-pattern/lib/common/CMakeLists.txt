@@ -3,7 +3,6 @@ add_library(common STATIC
     common.cpp
 )
 
-target_link_libraries(common PUBLIC )
 target_include_directories(common PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${CMAKE_CURRENT_SOURCE_DIR}/creational

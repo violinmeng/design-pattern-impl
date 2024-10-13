@@ -1,8 +1,10 @@
-#ifndef _HPP
-#define _HPP
+#pragma once
 
-namespace  {
-    
+#include <cstddef>
+namespace DesignPatternBase
+{
+template <typename F>
+void repeat(size_t n, F f) {
+    while (n--) f();
 }
-
-#endif// _HPP
+} // namespace DesignPatternBase
